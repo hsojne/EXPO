@@ -3,14 +3,15 @@
 
 #
 ## 🗻1st PJ
-- Explanation of the Osaka Expo with a statistical approach
-- A promotional channel : Github & X and Instagram
-- Method : R and Python
+# 🇯🇵 2025 Osaka-Kansai Expo Overview
 
-  - 오사카 엑스포 한국관 설명
-  - 현재 방문자 수와 현재 방문자 수 시각화
-  - 데이터 수집(웹 크롤링)으로 일본 내에서의 엑스포 관심도와 한국관 관심도 시각화
-  - 간단한 회귀분석으로 남은 엑스포 예측
-  
+- Item Contents
+Official Name 2025 Japan International Exhibition (Expo 2025 Osaka, Kanai, Japan)
+Venue: Yumeishima, Osaka Prefecture, Japan (夢洲)
+Host period: April 13 to October 13, 2025 (for 6 months)
+The theme "Designing Future Society for Our Lives"
+More than 150 countries will participate
+Major Contents Exhibition on Pavilion, Future Technology, Sustainability, Health, and Quality of Life of each country
+
 
 
