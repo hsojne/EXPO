@@ -21,14 +21,14 @@
 
 - The largest Korean pavilion in the expo. Under the theme of "Connection" the Korean Pavilion displays three themes in total.
 
-## Subsection 1 "Connection between people"
-- AI technology connects each country's language with music and light.
+> ## Subsection 1 "Connection between people"
+>> - AI technology connects each country's language with music and light.
 
-## Subsection 2 "Connection between Man and the Environment"
-- Restoring the devastated environment through Korea's eco-friendly technology.
+> ## Subsection 2 "Connection between Man and the Environment"
+>> - Restoring the devastated environment through Korea's eco-friendly technology.
 
-## Subsection 3 "Connection between Present and Future" [🖱️](https://youtu.be/tuzaJmtw-cw?si=3HHOCcdnnSXqGC2Y)
-- It connects the present and future generations through Korean K-pop as a medium. 
+> ## Subsection 3 "Connection between Present and Future" [🖱️](https://youtu.be/tuzaJmtw-cw?si=3HHOCcdnnSXqGC2Y)
+>> - It connects the present and future generations through Korean K-pop as a medium. 
 
 
 
