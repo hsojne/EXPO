@@ -7,30 +7,50 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
+      background: linear-gradient(to right, #e0f7fa, #fffde7);
       color: #333;
       margin: 0;
       padding: 0;
       transition: background-color 0.5s ease;
     }
     header {
-      background-color: #002f6c;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f0/Osaka_Castle_02bs3200.jpg');
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 1.5rem;
+      padding: 2rem;
       text-align: center;
-      animation: slideIn 1s ease-out;
+      animation: bounceIn 1.5s ease;
+    }
+    .lang-buttons {
+      text-align: center;
+      margin: 1rem;
+    }
+    .lang-buttons button {
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      font-size: 1rem;
+      border: none;
+      background-color: #ff4081;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .lang-buttons button:hover {
+      background-color: #f50057;
     }
     section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 1.5rem;
       background: white;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      animation: fadeIn 1.2s ease-in;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      animation: fadeInUp 1.2s ease-in-out;
     }
     h1, h2, h3 {
-      color: #002f6c;
+      color: #004d40;
     }
     table {
       width: 100%;
@@ -43,14 +63,14 @@
       text-align: center;
     }
     th {
-      background-color: #e0e0e0;
+      background-color: #b2ebf2;
     }
     .emoji {
       font-size: 1.2rem;
     }
     .link {
       text-decoration: none;
-      color: #007acc;
+      color: #0288d1;
     }
     .link:hover {
       text-decoration: underline;
@@ -58,20 +78,21 @@
     .resource {
       margin-top: 1.5rem;
       padding: 1rem;
-      background-color: #e8f4ff;
-      border-left: 5px solid #007acc;
+      background-color: #f1f8e9;
+      border-left: 5px solid #8bc34a;
       border-radius: 5px;
     }
     .resource a {
       font-weight: bold;
     }
-    @keyframes slideIn {
-      from { transform: translateY(-30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    @keyframes fadeInUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     @media (max-width: 600px) {
       section {
@@ -89,51 +110,92 @@
     <h1>🗻 2025 Osaka-Kansai Expo - Korea Pavilion Overview</h1>
   </header>
 
-  <section>
-    <h2>🇯🇵 About the 2025 Osaka-Kansai Expo</h2>
-    <p>
-      The 2025 Osaka-Kansai Expo marks the return of the World Expo to Osaka after 50 years since the 1970 Expo, a landmark event symbolizing Japan’s economic golden age.
-      This upcoming Expo will serve as a global platform to present each country's technological and social vision for future society.
-      It will be organized under the central theme <strong>"Designing Future Society for Our Lives"</strong>, and is structured around three sub-themes: <em>Saving Lives</em>, <em>Empowering Lives</em>, and <em>Connecting Lives</em>.
-    </p>
-    <table>
-      <tr><th>Item</th><th>Details</th></tr>
-      <tr><td>Official Name</td><td>2025 Osaka-Kansai Expo</td></tr>
-      <tr><td>Venue</td><td><a class="link" href="https://maps.app.goo.gl/8vFTUjzAt284tsnY8" target="_blank">Yumeshima, Osaka, Japan 🗾</a></td></tr>
-      <tr><td>Duration</td><td>April 13, 2025 – October 13, 2025 (184 days)</td></tr>
-      <tr><td>Theme</td><td>"Designing Future Society for Our Lives"</td></tr>
-      <tr><td>Participating Countries</td><td>More than 150 countries</td></tr>
-      <tr><td>Main Topics</td><td>Future Technology, Sustainability, and Quality of Life</td></tr>
-      <tr><td>Mascot</td><td>Myakumyaku (ミャクミャク) — Gets cuter the more you see it</td></tr>
-    </table>
+  <div class="lang-buttons">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('jp')">日本語</button>
+  </div>
 
-    <div class="resource">
-      🔗 <a href="https://www.expo2025.or.jp/en/" target="_blank">Visit the Official 2025 Expo Website</a>
-    </div>
-  </section>
+  <section id="content"></section>
 
-  <section>
-    <h2>🇰🇷 Korea Pavilion</h2>
-    <p>
-      The Korea Pavilion is one of the largest national pavilions at the 2025 Expo, themed around <strong>“Connection”</strong>. It highlights the following three key concepts:
-    </p>
-    <h3>1️⃣ Connection Between People</h3>
-    <ul>
-      <li>AI technology connects languages of different countries through music and light.</li>
-    </ul>
-    <h3>2️⃣ Connection Between Humanity and the Environment</h3>
-    <ul>
-      <li>Showcasing Korea’s eco-friendly technologies that aim to restore the environment.</li>
-    </ul>
-    <h3>3️⃣ Connection Between Present and Future Generations</h3>
-    <ul>
-      <li>Connecting generations through the cultural medium of K-pop.</li>
-      <li><a class="link" href="https://youtu.be/tuzaJmtw-cw?si=3HHOCcdnnSXqGC2Y" target="_blank">🖱️ Watch Intro Video</a></li>
-    </ul>
 
-    <div class="resource">
-      🎧 <a href="https://koreapavilion.kr" target="_blank">Explore More About Korea Pavilion (Official Site)</a>
-    </div>
-  </section>
+  <script>
+    const content = {
+      en: `
+        <h2>🇯🇵 About the 2025 Osaka-Kansai Expo</h2>
+        <p>The 2025 Osaka-Kansai Expo marks the return of the World Expo to Osaka after 50 years since the 1970 Expo, a landmark event symbolizing Japan’s economic golden age.
+        This upcoming Expo will serve as a global platform to present each country's technological and social vision for future society.
+        It will be organized under the central theme <strong>"Designing Future Society for Our Lives"</strong>, and is structured around three sub-themes: <em>Saving Lives</em>, <em>Empowering Lives</em>, and <em>Connecting Lives</em>.</p>
+        <table>
+          <tr><th>Item</th><th>Details</th></tr>
+          <tr><td>Official Name</td><td>2025 Osaka-Kansai Expo</td></tr>
+          <tr><td>Venue</td><td><a class="link" href="https://maps.app.goo.gl/8vFTUjzAt284tsnY8" target="_blank">Yumeshima, Osaka, Japan 🗾</a></td></tr>
+          <tr><td>Duration</td><td>April 13, 2025 – October 13, 2025 (184 days)</td></tr>
+          <tr><td>Theme</td><td>"Designing Future Society for Our Lives"</td></tr>
+          <tr><td>Participating Countries</td><td>More than 150 countries</td></tr>
+          <tr><td>Main Topics</td><td>Future Technology, Sustainability, and Quality of Life</td></tr>
+          <tr><td>Mascot</td><td>Myakumyaku (ミャクミャク)</td></tr>
+        </table>
+        <div class="resource">
+          🔗 <a href="https://www.expo2025.or.jp/en/" target="_blank">Visit the Official 2025 Expo Website</a>
+        </div>
+
+        <h2>🇰🇷 Korea Pavilion</h2>
+        <p>The Korea Pavilion is one of the largest national pavilions at the 2025 Expo, themed around <strong>“Connection”</strong>. It highlights the following three key concepts:</p>
+        <h3>1️⃣ Connection Between People</h3>
+        <ul><li>AI technology connects languages of different countries through music and light.</li></ul>
+        <h3>2️⃣ Connection Between Humanity and the Environment</h3>
+        <ul><li>Showcasing Korea’s eco-friendly technologies that aim to restore the environment.</li></ul>
+        <h3>3️⃣ Connection Between Present and Future Generations</h3>
+        <ul>
+          <li>Connecting generations through the cultural medium of K-pop.</li>
+          <li><a class="link" href="https://youtu.be/tuzaJmtw-cw?si=3HHOCcdnnSXqGC2Y" target="_blank">🖱️ Watch Intro Video</a></li>
+        </ul>
+        <div class="resource">
+          🎧 <a href="https://koreapavilion.kr" target="_blank">Explore More About Korea Pavilion (Official Site)</a>
+        </div>
+      `,
+      jp: `
+        <h2>🇯🇵 2025年 大阪・関西万博について</h2>
+        <p>2025年の大阪・関西万博は、1970年の大阪万博以来50年ぶりの開催で、日本の黄金期を象徴する歴史的なイベントの再来です。
+        「いのち輝く未来社会のデザイン」というテーマのもと、各国の未来社会に対する技術的・社会的なビジョンが展示されます。
+        テーマは、「いのちを救う」「いのちに力を与える」「いのちをつなぐ」の3つのサブテーマで構成されています。</p>
+        <table>
+          <tr><th>項目</th><th>内容</th></tr>
+          <tr><td>正式名称</td><td>2025年 日本国際博覧会（大阪・関西万博）</td></tr>
+          <tr><td>開催地</td><td><a class="link" href="https://maps.app.goo.gl/8vFTUjzAt284tsnY8" target="_blank">夢洲（大阪市此花区）🗾</a></td></tr>
+          <tr><td>開催期間</td><td>2025年4月13日〜10月13日（184日間）</td></tr>
+          <tr><td>テーマ</td><td>「いのち輝く未来社会のデザイン」</td></tr>
+          <tr><td>参加国数</td><td>150以上の国</td></tr>
+          <tr><td>主な内容</td><td>未来技術、持続可能性、生活の質</td></tr>
+          <tr><td>マスコット</td><td>ミャクミャク（Myakumyaku）</td></tr>
+        </table>
+        <div class="resource">
+          🔗 <a href="https://www.expo2025.or.jp/" target="_blank">公式サイトはこちら</a>
+        </div>
+
+        <h2>🇰🇷 韓国パビリオン</h2>
+        <p>韓国パビリオンは、「つながり」をテーマに掲げた最大級の国家パビリオンです。以下の3つのキーワードを中心に構成されています：</p>
+        <h3>1️⃣ 人と人とのつながり</h3>
+        <ul><li>AI技術により、音楽と光で国境を越えた言語をつなぎます。</li></ul>
+        <h3>2️⃣ 人と環境とのつながり</h3>
+        <ul><li>韓国のエコ技術によって、破壊された環境の回復を目指します。</li></ul>
+        <h3>3️⃣ 現在と未来世代とのつながり</h3>
+        <ul>
+          <li>K-POPを通じて、世代間のつながりを実現します。</li>
+          <li><a class="link" href="https://youtu.be/tuzaJmtw-cw?si=3HHOCcdnnSXqGC2Y" target="_blank">🖱️ 紹介映像はこちら</a></li>
+        </ul>
+        <div class="resource">
+          🎧 <a href="https://koreapavilion.kr" target="_blank">韓国パビリオンの詳細（公式サイト）</a>
+        </div>
+      `
+    };
+
+
+    function setLanguage(lang) {
+      document.getElementById('content').innerHTML = content[lang];
+    }
+
+    window.onload = () => setLanguage('en');
+  </script>
 </body>
 </html>
